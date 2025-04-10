@@ -1,22 +1,87 @@
-
-<center>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<h1>Student Registration</h1>
+  <meta charset="UTF-8">
+  <title>Student Registration</title>
+  <style>
+    body {
+      background-color: orange;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
 
+    h1 {
+      color: white;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 15px;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 15px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: darkorange;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .form-container button:hover {
+      background-color: orangered;
+    }
+
+    .form-container a {
+      text-decoration: none;
+    }
+  </style>
 </head>
+<body>
 
-Student ID:<input id ="first name"><br></br>
-First Name:<input id ="first name"><br></br>
-Last Name:<input id ="last name"><br></br>
-Course:<input id ="course"><br></br>
-Birthdate:<input id ="birthdate"></input><br></br>
-Mobile Number:<input id ="mobile number"><br></br>
-Username:<input id ="username"><br></br>
-Password:<input id ="password"><br></br>
-<button inclick="Register")>Register</button>
+  <h1>Student Registration</h1>
+  <div class="form-container">
+    Student ID:<input id="studentId" type="text"><br>
+    First Name:<input id="firstName" type="text"><br>
+    Last Name:<input id="lastName" type="text"><br>
+    Course:<input id="course" type="text"><br>
+    Birthdate:<input id="birthdate" type="date"><br>
+    Mobile Number:<input id="mobileNumber" type="text"><br>
+    Username:<input id="username" type="text"><br>
+    Password:<input id="password" type="password"><br>
+    <button onclick="register()">Register</button><br><br>
+    <a href="homepage.html"><button>Go to Homepage</button></a>
+  </div>
 
-<a href="homepage.html"<button onclick = "Register()"Register</button>
+  <script>
+    function register() {
+      const studentId = document.getElementById("studentId").value;
+      const firstName = document.getElementById("firstName").value;
+      const lastName = document.getElementById("lastName").value;
+      const course = document.getElementById("course").value;
+      const birthdate = document.getElementById("birthdate").value;
+      const mobileNumber = document.getElementById("mobileNumber").value;
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
 
-</center>
+      alert("Registration successful for: " + firstName + " " + lastName);
+      // You can add form validation or saving to localStorage here
+    }
+  </script>
+
 </body>
 </html>
